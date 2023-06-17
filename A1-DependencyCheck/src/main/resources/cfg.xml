@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+
+<bean id="std" class="com.demo.Student" dependency-check="none">
+<property name="id" value="1"></property>
+<property name="name" value="akash"></property>
+<property name="age" value="16"></property>
+<property name="dept"  ref="dept"></property>
+
+
+</bean>
+
+<bean id="dept" class="com.demo.Department">
+<property name="deptid" value="101"></property>
+<property name="deptname" value="CIVIL"></property>
+</bean>
+</beans>
